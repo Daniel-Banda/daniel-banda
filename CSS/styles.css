@@ -1,0 +1,12 @@
+html{
+    --bg:#080000;
+    --txt: #f1f1f1;
+
+    background-color: var(--bg);
+    color: var(--txt);
+}
+body{
+    /* Por Bootstrap */
+        background-color: transparent;
+        color: inherit;
+}
