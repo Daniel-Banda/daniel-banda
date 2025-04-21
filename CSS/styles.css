@@ -1,12 +1,67 @@
 html{
-    --bg:#080000;
-    --txt: #f1f1f1;
+    --black:#1F1F1F;
+    --carbon: #191919;
+    --hice: #f1f1f1;
+    --orange: #F67011;
+    --blue: #1F5B65; 
 
-    background-color: var(--bg);
-    color: var(--txt);
+
+
+    background-color: var(--black);
+    color: var(--hice);
+    font-size: 16px;
 }
 body{
     /* Por Bootstrap */
         background-color: transparent;
         color: inherit;
 }
+
+h1{
+    font-family: "Montserrat" ;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align:center; 
+   
+}
+
+h2{
+    text-align:center;
+    font-family:"Raleway";
+    font-size: 1.0rem;
+    font-weight:600;
+}
+
+h3{
+    text-align:center;
+    font-family:"Roboto";
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.carousel-caption {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  
+#img-notas{
+    width:20rem;
+}
+
+#col-uno{
+    background-color:var(--txt);
+    color:var(--bg);
+
+}
+
+#carouselExampleCaptions{
+    box-shadow: 0 4px 6px -4px var(--orange);
+}
+
