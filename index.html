@@ -1,106 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CSS/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-<title>Daniel Banda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Banda</title>
+  
+  <link rel="icon" href="./assets/Logo_DB (1).webp" type="image/webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&family=Raleway:wght@100..900&family=Roboto:wght@100..900&family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <main class="container-fluid p-0">
 
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="carousel-caption text-center">
-          <h1>Domina la Plataforma de Meta Ads y Toma Mejores Decisiones Publicitarias</h1>
-          <p>Aprende a Usar Meta Ads para Crear Anuncios en Facebook e Instagram</p>
+    <!-- Banner principal -->
+    <section id="hero">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption text-center">
+            <h1>Domina la Plataforma de Meta Ads y Toma Mejores Decisiones Publicitarias</h1>
+            <p>Aprende a Usar Meta Ads para Crear Anuncios en Facebook e Instagram</p>
+          </div>
+          <img src="./assets/banner2.0.webp" class="d-block w-100" alt="Portada-meta-ads">
         </div>
-        <img src="./assets/banner2.0.webp" class="d-block w-100" alt="Portada-meta-ads">
       </div>
-    </div>
-  </div>
-  <br><br>
+    </section>
 
-  <h2>¡Habilidades que desarrollarás! </h2><br><br>
-  <div class="container text-center">
-    <div class="row align-items-start">
-      <div class="col">
-        <img src="./assets/brain.png" alt="Icono-lógica" style="width: 18%; margin-bottom: 0.8rem;">
-        <h3>Entender la lógica de meta ads</h3>
-        <hr style="border: 3px solid var(--orange); margin: 15px auto; border-radius: 1rem; width: 50%;">
+    <!-- Habilidades -->
+    <section class="habilidades text-center my-5">
+      <h2>¡Habilidades que desarrollarás!</h2>
+      <div class="container" id="contenedor-habilidades">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
+            <img src="./assets/brain.png" alt="Lógica" class="icono-habilidad">
+            <h3>Entender la lógica de Meta Ads</h3>
+            <hr class="hr-orange">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
+            <img src="./assets/coin.png" alt="Presupuesto" class="icono-habilidad">
+            <h3>Calcula el presupuesto de tu campaña</h3>
+            <hr class="hr-blue">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
+            <img src="./assets/config.png" alt="Control" class="icono-habilidad">
+            <h3>Control total de tus anuncios</h3>
+            <hr class="hr-orange">
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
+            <img src="./assets/analytics.png" alt="Optimización" class="icono-habilidad">
+            <h3>Lectura y optimización de resultados</h3>
+            <hr class="hr-blue">
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <img src="./assets/coin.png" alt="Icono-lógica" style="width: 18%; margin-bottom: 0.8rem;">
-        <h3>Calcula el presupuesto de tu campaña</h3>    
-        <hr style="border: 3px solid var(--blue); margin: 15px auto; border-radius: 1rem; width: 50%;">  
-      </div>
-      <div class="col">
-        <img src="./assets/config.png" alt="Icono-lógica" style="width: 18%; margin-bottom: 0.8rem;">
-        <h3>Control total de tus anuncios</h3>
-        <hr style="border: 3px solid var(--orange); margin: 15px auto; border-radius: 1rem; width: 50%;">      
-      </div>
-      <div class="col">
-        <img src="./assets/analytics.png" alt="Icono-lógica" style="width: 18%; margin-bottom: 0.8rem;">
-        <h3>Lectura y optimización de resultados</h3>
-        <hr style="border: 3px solid var(--blue); margin: 15px auto; border-radius: 1rem; width: 50%;">      
-      </div>
-    </div>
-  </div>  <br>     
+    </section>
     
-      <div class="row" style="background-color: var(--hice); margin-top: 3rem;">
-        <div class="col-md-6 col-12" style="background-image: url('./assets/pen-4337521_1280.jpg'); background-size: cover; background-position: center; min-height: 200px;"></div>
-        <div class="col-md-6 col-12" style="min-height: 200px; padding: 1rem 3rem;">
-          <h2 style="text-align: left; margin-top: 1.9rem; color: var(--orange);">¿Para quién está diseñado este curso?</h2>
-          <ul style="color:var(--carbon); text-align:left; font-family: Source Sans 3, sans-serif; font-size: 0.9rem; font-weight:400;">
+    <!-- Público objetivo -->
+    <section class="para-quien row m-0" id="para-quien">
+      <div class="col-md-6 bg-img"></div>
+      <div class="col-md-6 p-4 d-flex align-items-center">
+        <div>
+          <h2 class="text-left text-orange">¿Para quién está diseñado este curso?</h2>
+          <ul class="text-left lista-carbon">
             <li>Vendés productos o servicios y querés atraer más clientes.</li>
-            <li>No quieres tirar tu presupuesto sin saber cómo funciona meta ads.</li>
+            <li>No quieres tirar tu presupuesto sin saber cómo funciona Meta Ads.</li>
             <li>Nunca pautaste, pero quieres aprender desde cero.</li>
             <li>Quieres saber cuánto invertir, cómo medir resultados y si te conviene usar Meta Ads.</li>
           </ul>
         </div>
       </div>
+    </section>
 
-      <div>
-        <h3></h3>
-        <p style="padding: 2rem 15rem; text-align:center; margin: 2rem 0;">Vas a salir con claridad, confianza y herramientas concretas para tomar mejores decisiones publicitarias.
-          Todo 100% en vivo, con espacio para preguntar, practicar y llevarte material editable que vas a poder usar de referencia siempre.</p>
+    <!-- Mensaje intermedio -->
+    <section class="mensaje-central text-center px-5">
+      <p id="mensaje-central">
+        Vas a salir con claridad, confianza y herramientas concretas para tomar mejores decisiones publicitarias.
+        Todo 100% en vivo, con espacio para preguntar, practicar y llevarte material editable que vas a poder usar de referencia siempre.
+      </p>
+    </section>
 
+    <!-- Contenido del curso -->
+    <section class="contenido-curso row mx-auto my-4">
+      <div class="col-md-4 bg-orange d-flex align-items-center justify-content-center ">
+        <ul class="lista-curso">
+          <li><img src="./assets/live-icon.png"> 4 horas (2 sesiones de 2 horas cada una)</li>
+          <li><img src="./assets/clock-icon.png"> 100% en línea (clases en vivo)</li>
+          <li><img src="./assets/notes-icon.png"> Acceso a grabaciones y plantillas</li>
+          <li><img src="./assets/laptop-icon.png"> Ejercicios prácticos con campañas reales</li>
+        </ul>
       </div>
-
-      <h2>Lo que incluye este curso intensivo:</h2>
-      <div class="row" style="margin: 2rem 10rem 0rem 10rem; border-radius: 1rem;">
-        <div class="col-md-4 col-12"></div>
-          
-        <div class="col-md-8 col-12" style="min-height: 200px; padding: 1rem 3rem; background-color: var(--carbon);">
-          <h2 style="text-align: left; margin-top: 1.9rem; color: var(--orange);">¿Para quién está diseñado este curso?</h2>
-          <ul style="color:var(--hice); text-align:left; font-family: Source Sans 3, sans-serif; font-size: 0.9rem; font-weight:400;">
-            <li>Cómo funciona Meta Ads y por qué no es solo “promocionar publicaciones”.</li>
-            <li>Configuración completa de Business Manager, cuenta publicitaria, pixel y eventos.</li>
-            <li>Estructura profesional de campañas: campaña → conjunto → anuncio.</li>
-            <li>Segmentación inteligente según tu tipo de negocio.</li>
-            <li>Creación paso a paso de tu primer anuncio.</li>
-            <li>Elección de formatos, redacción de copy y presupuesto inicial.</li>
-            <li>Lectura de métricas clave para saber si tu campaña funciona.</li>
-            <li>Optimización rápida sin volverte loco.</li>
-          </ul>
-        </div>
+      <div class="col-md-8 bg-carbon p-4">
+        <h2 class="text-left text-orange">¿Qué aprenderás?</h2>
+        <ul class="lista-hice">
+          <li>Cómo funciona Meta Ads y por qué no es solo “promocionar publicaciones”.</li>
+          <li>Configuración completa de Business Manager, cuenta publicitaria, pixel y eventos.</li>
+          <li>Estructura profesional de campañas: campaña → conjunto → anuncio.</li>
+          <li>Segmentación inteligente según tu tipo de negocio.</li>
+          <li>Creación paso a paso de tu primer anuncio.</li>
+          <li>Elección de formatos, redacción de copy y presupuesto inicial.</li>
+          <li>Lectura de métricas clave para saber si tu campaña funciona.</li>
+          <li>Optimización rápida sin volverte loco.</li>
+        </ul>
       </div>
+    </section>
 
+    <footer class="footer-bar d-flex justify-content-center align-items-center">
+      <p class="mb-0 fw-semibold" id="footer">&copy; 2025 Daniel Banda</p>
+    </footer>
 
-    <script src="./JS/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
+  </main>
+
+  <script src="./JS/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
