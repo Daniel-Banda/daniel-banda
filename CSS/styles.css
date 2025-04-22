@@ -98,15 +98,19 @@
   .hr-orange {
     border: 3px solid var(--orange);
     width: 50%;
-    margin: 15px auto;
+    margin: 0px auto;
     border-radius: 1rem;
   }
   
   .hr-blue {
     border: 3px solid var(--blue);
     width: 50%;
-    margin: 15px auto;
+    margin: 0px auto;
     border-radius: 1rem;
+  }
+
+  .txt-habilidades{
+    margin-top: 18px;
   }
   
   .bg-img {
@@ -206,3 +210,51 @@
   #mensaje-central{
     margin: 10px 45px;
   }
+
+ #btn-fin{
+  margin-left: 15px;
+  background-color: var(--blue);
+  border:none ;
+  padding: 8px 10px;
+ }
+
+ #bloque-oferta{
+  margin-top: 20px;
+ }
+
+ .boton-reserva {
+  display: inline-block;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.boton-reserva:hover {
+  border-radius: 5px;
+  background-color: var(--orange);
+  color: white;
+}
+
+.btn-reserva {
+  display: inline-block;
+  border: 2px solid var(--blue);
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reserva:hover {
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: white;
+}

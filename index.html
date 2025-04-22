@@ -19,18 +19,48 @@
 <body>
   <main class="container-fluid p-0">
 
-    <!-- Banner principal -->
     <section id="hero">
-      <div class="carousel-inner">
+      <div class="carousel-inner position-relative">
         <div class="carousel-item active">
+          
+          <!-- Título y subtítulo centrados -->
           <div class="carousel-caption text-center">
             <h1>Domina la Plataforma de Meta Ads y Toma Mejores Decisiones Publicitarias</h1>
             <p>Aprende a Usar Meta Ads para Crear Anuncios en Facebook e Instagram</p>
+                  <!-- Botón de llamada a la acción -->
+      <div class="boton-cta-container text-center mt-3">
+        <a href="https://payhip.com/order?link=YIaTp&pricing_plan=PVBrewJvz8" target="_blank" class="boton-reserva">
+          ¡Reserva tu lugar ahora!
+        </a>
+      </div>
           </div>
+    
+        
+    
+          <!-- Imagen del banner -->
           <img src="./assets/banner2.0.webp" class="d-block w-100" alt="Portada-meta-ads">
         </div>
       </div>
     </section>
+    
+              <!-- Bloque con la oferta, plazas y contador -->
+              <div id="bloque-oferta" class="position-relative bottom-0 start-0 w-100 text-white text-center py-3 bg-dark bg-opacity-75">
+                <p class="m-0 fs-5">
+                  <span class="text-decoration-line-through text-danger">$499</span> 
+                  <span class="fw-bold text-success fs-4">$99</span> 
+                  <span class="ms-3 text-warning">🔥 Solo 10 plazas disponibles</span>
+                </p>
+                <p class="m-0 fs-5">
+                  <span class="fw-semibold">Las inscripciones se cierran en:</span>
+                  <span id="contador" class="ms-2 fw-bold"></span>
+                </p>
+              </div>
+        
+              <!-- Mensaje que se muestra cuando finaliza la inscripción -->
+              <div id="proximamente" class="position-absolute bottom-0 start-0 w-100 text-center py-3 bg-dark bg-opacity-75 text-white fw-bold fs-4 d-none">
+                Próximamente
+              </div>
+    
 
     <!-- Habilidades -->
     <section class="habilidades text-center my-5">
@@ -39,22 +69,22 @@
         <div class="row justify-content-center text-center">
           <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
             <img src="./assets/brain.png" alt="Lógica" class="icono-habilidad">
-            <h3>Entender la lógica de Meta Ads</h3>
+            <h3 class="txt-habilidades">Entender la lógica de Meta Ads</h3>
             <hr class="hr-orange">
           </div>
           <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
             <img src="./assets/coin.png" alt="Presupuesto" class="icono-habilidad">
-            <h3>Calcula el presupuesto de tu campaña</h3>
+            <h3 class="txt-habilidades">Calcula el presupuesto de tu campaña</h3>
             <hr class="hr-blue">
           </div>
           <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
             <img src="./assets/config.png" alt="Control" class="icono-habilidad">
-            <h3>Control total de tus anuncios</h3>
+            <h3 class="txt-habilidades">Control total de tus anuncios</h3>
             <hr class="hr-orange">
           </div>
           <div class="col-md-3 col-sm-6 mb-4 d-flex flex-column align-items-center">
             <img src="./assets/analytics.png" alt="Optimización" class="icono-habilidad">
-            <h3>Lectura y optimización de resultados</h3>
+            <h3 class="txt-habilidades">Lectura y optimización de resultados</h3>
             <hr class="hr-blue">
           </div>
         </div>
@@ -68,7 +98,7 @@
         <div>
           <h2 class="text-left text-orange">¿Para quién está diseñado este curso?</h2>
           <ul class="text-left lista-carbon">
-            <li>Vendés productos o servicios y querés atraer más clientes.</li>
+            <li>Vendes productos o servicios y quieres atraer más clientes.</li>
             <li>No quieres tirar tu presupuesto sin saber cómo funciona Meta Ads.</li>
             <li>Nunca pautaste, pero quieres aprender desde cero.</li>
             <li>Quieres saber cuánto invertir, cómo medir resultados y si te conviene usar Meta Ads.</li>
@@ -80,8 +110,7 @@
     <!-- Mensaje intermedio -->
     <section class="mensaje-central text-center px-5">
       <p id="mensaje-central">
-        Vas a salir con claridad, confianza y herramientas concretas para tomar mejores decisiones publicitarias.
-        Todo 100% en vivo, con espacio para preguntar, practicar y llevarte material editable que vas a poder usar de referencia siempre.
+        Al finalizar este workshop, vas a dominar las herramientas clave del Administrador de Anuncios de Meta para crear campañas efectivas en Facebook e Instagram. Vas a entender cada paso, desde la segmentación hasta la configuración del presupuesto, sin depender de terceros.
       </p>
     </section>
 
@@ -89,8 +118,8 @@
     <section class="contenido-curso row mx-auto my-4">
       <div class="col-md-4 bg-orange d-flex align-items-center justify-content-center ">
         <ul class="lista-curso">
-          <li><img src="./assets/live-icon.png"> 4 horas (2 sesiones de 2 horas cada una)</li>
-          <li><img src="./assets/clock-icon.png"> 100% en línea (clases en vivo)</li>
+          <li><img src="./assets/clock-icon.png"> 3 horas (2 sesiones de 90 minutos cada una)</li>
+          <li><img src="./assets/live-icon.png"> 100% en línea (clases en vivo)</li>
           <li><img src="./assets/notes-icon.png"> Acceso a grabaciones y plantillas</li>
           <li><img src="./assets/laptop-icon.png"> Ejercicios prácticos con campañas reales</li>
         </ul>
@@ -105,8 +134,13 @@
           <li>Creación paso a paso de tu primer anuncio.</li>
           <li>Elección de formatos, redacción de copy y presupuesto inicial.</li>
           <li>Lectura de métricas clave para saber si tu campaña funciona.</li>
-          <li>Optimización rápida sin volverte loco.</li>
+          <li>Optimizar y escalar campañas.</li>
         </ul>
+        <div class="boton-cta-container text-left mt-3">
+          <a href="https://payhip.com/order?link=YIaTp&pricing_plan=PVBrewJvz8" target="_blank" class="btn-reserva">
+            ¡Reserva tu lugar ahora!
+          </a>
+        </div>
       </div>
     </section>
 
