@@ -1,13 +1,10 @@
-const fechaObjetivo = new Date("2025-04-30T20:00:00").getTime();
-
 const actualizarContador = () => {
   const ahora = new Date().getTime();
-  const diferencia = fechaObjetivo - ahora;
+  const diferencia = fechaLimite - ahora;
 
   if (diferencia <= 0) {
-    document.getElementById("bloque-oferta").classList.add("d-none");
-    document.getElementById("proximamente").classList.remove("d-none");
     clearInterval(intervalo);
+    document.getElementById("contador").innerHTML = "Inscripciones cerradas";
     return;
   }
 
@@ -20,4 +17,5 @@ const actualizarContador = () => {
     `${dias}d ${horas}h ${minutos}m ${segundos}s`;
 };
 
+const fechaLimite = new Date("May 2, 2025 22:00:00").getTime();
 const intervalo = setInterval(actualizarContador, 1000);
