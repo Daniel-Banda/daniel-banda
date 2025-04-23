@@ -192,6 +192,7 @@
     height: 3rem;
     box-shadow: 0px -2px 25px 0px var(--blue);
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .footer-bar p {
