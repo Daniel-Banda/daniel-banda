@@ -13,30 +13,31 @@
   }
   
   body {
+    margin: 0;
+    padding: 0;
     background-color: transparent;
     overflow-x: hidden;
     color: var(--hice);
   }
+
+
   
   h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    text-align: center;
   }
   
   h2 {
     font-family: "Raleway", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    text-align: center;
   }
   
   h3 {
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
     font-weight: 200;
-    text-align: center;
   }
   
   p {
@@ -265,4 +266,48 @@
     padding-left: 0.5rem !important; /* px-2 */
     padding-right: 0.5rem !important;
   }
+}
+
+/*---------------------------------- CALCULADORA----------------------------------------------*/
+
+
+
+
+#nav-container {
+  background-color: var(--carbon);
+  position: fixed;
+  width: 100%;
+  z-index: 1050;  /* Asegura que el nav se apile encima de otros elementos */
+}
+
+
+
+.text-orange {
+  color: var(--orange) !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+
+
+.btn-help {
+  background-color: #fd7e14; /* naranja */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-help:hover {
+  background-color: #e96b0c;
 }
