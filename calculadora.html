@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <script src="./JS/loader.js"></script>
+
   <!-- Etiqueta de Google -->
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8C28F8Q0R8"></script>
@@ -30,6 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&family=Raleway:wght@100..900&family=Roboto:wght@100..900&family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
 
+  <script src="./JS/loader.js"></script>
 <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -52,238 +53,122 @@
 <body>
     <div id="nav-container">
     </div>
+    <span ></span>
 
-    <div class="container" style="padding-top: 90px;">
-        <h2 class="mb-4">Calculadora de Meta de Conversiones</h2>
-        <form id="conversionForm" class="card p-4 shadow-sm">
+    <div class="container first-container">
+      <div class="p-4 rounded shadow">
+        <h1 class="mb-4 text-center">Calculadora de Rentabilidad en Meta Ads</h1>
+        <form id="formulario">
           <div class="row mb-3">
             <div class="col-md-4">
-              <label for="presupuesto" class="form-label">Presupuesto total (MXN)</label>
-              <input type="number" class="form-control" id="presupuesto" placeholder="Ej. 1000">
-            </div>
-            <div class="col-md-4">
-              <label for="cpc" class="form-label d-flex align-items-center">
-                Costo por clic estimado (MXN)
-                <button type="button" class="btn-help ms-2" data-bs-toggle="modal" data-bs-target="#modalCPC" title="¿Qué es esto?">?</button>
-              </label>
-              <input type="number" class="form-control" id="cpc" placeholder="Ej. 2.5">
-            </div>
-            <div class="col-md-4">
-              <label for="tasa" class="form-label d-flex align-items-center">
-                Tasa de conversión estimada (%)
-                <button type="button" class="btn-help ms-2" data-bs-toggle="modal" data-bs-target="#modalTasa" title="¿Qué es esto?">?</button>
-              </label>
-              <input type="number" class="form-control" id="tasa" placeholder="Ej. 3">
-            </div>
-          </div>
-      
-          <div class="row mb-4">
-            <div class="col-md-4">
-              <label for="valor" class="form-label d-flex align-items-center">
-                Ticket promedio por conversión (opcional)
-                <button type="button" class="btn-help ms-2" data-bs-toggle="modal" data-bs-target="#modalTicket" title="¿Qué es esto?">?</button>
-              </label>
-              <input type="number" class="form-control" id="valor" placeholder="Ej. 250">
-            </div>
-            <div class="col-md-4">
-              <label for="minimo" class="form-label d-flex align-items-center">
-                Objetivo mínimo de conversiones (opcional)
-                <button type="button" class="btn-help ms-2" data-bs-toggle="modal" data-bs-target="#modalConversiones" title="¿Qué es esto?">?</button>
-              </label>
-              <input type="number" class="form-control" id="minimo" placeholder="Ej. 20">
-            </div>
-            <div class="col-md-4">
-              <label for="trafico" class="form-label d-flex align-items-center">
-                Tipo de tráfico (opcional)
-                <button type="button" class="btn-help ms-2" data-bs-toggle="modal" data-bs-target="#modalTrafico" title="¿Qué es esto?">?</button>
-              </label>
-              <select class="form-select" id="trafico">
-                <option value="">Selecciona uno</option>
-                <option value="frio">Frío (1-2%)</option>
-                <option value="tibio">Tibio (3-5%)</option>
-                <option value="caliente">Caliente (6-10%)</option>
+              <label for="industria" class="form-label">Industria</label>
+              <select class="form-select" id="industria" onchange="rellenarValores()">
+                <option value="personalizado">Valores personalizados</option>
+                <option value="vestir">Vestir</option>
+                <option value="auto">Auto</option>
+                <option value="b2b">B2B</option>
+                <option value="belleza">Belleza</option>
+                <option value="servicios">Servicios al consumidor</option>
+                <option value="educacion">Educación</option>
+                <option value="empleo">Empleo y capacitación laboral</option>
+                <option value="finanzas">Finanzas y seguros</option>
+                <option value="fitness">Aptitud física</option>
+                <option value="hogar">Mejoras del hogar</option>
+                <option value="salud">Cuidado de la salud</option>
+                <option value="industriales">Servicios industriales</option>
+                <option value="legal">Legal</option>
+                <option value="bienes">Bienes raíces</option>
+                <option value="minorista">Minorista</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="viajes">Viajes y hospitalidad</option>
               </select>
             </div>
+            <div class="col-md-4">
+              <label for="presupuesto" class="form-label">Presupuesto total de campaña ($)</label>
+              <input type="number" class="form-control" id="presupuesto" placeholder="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="cpc" class="form-label">CPC estimado ($)</label>
+              <input type="number" class="form-control" id="cpc" step="0.01" placeholder="" required>
+            </div>
           </div>
-      
-          <button type="button" onclick="calcular()" class="btn btn-primary w-100">Calcular</button>
+    
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="ctr" class="form-label">CTR estimado (%)</label>
+              <input type="number" class="form-control" id="ctr" step="0.1" placeholder="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="cvr" class="form-label">CVR estimado (%)</label>
+              <input type="number" class="form-control" id="cvr" step="0.1" placeholder="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="precio" class="form-label">Precio público del producto ($)</label>
+              <input type="number" class="form-control" id="precio" placeholder="" required>
+            </div>
+          </div>
+    
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label for="costo" class="form-label">Costo para ti del producto ($)</label>
+              <input type="number" class="form-control" id="costo" placeholder="" required>
+            </div>
+            <div class="col-md-4">
+              <label for="dias" class="form-label">Duración (días)</label>
+              <input type="number" class="form-control" id="dias" placeholder="" required>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+              <button type="button" class="btn btn-primary w-100" onclick="calcular()">Calcular</button>
+            </div>
+          </div>
         </form>
-      
-        <div class="alert alert-info mt-4 d-none" id="resultado"></div>
       </div>
+    </div>
+    
+      <!-- Resultados -->
+<div class="mt-5" id="resultados" style="display: none;">
+  <h4>Resultados estimados:</h4>
+  <ul>
+    <li><span class="resultado">Impresiones estimadas:</span> <span id="impresiones"></span></li>
+    <li><span class="resultado">Clics estimados:</span> <span id="clics"></span></li>
+    <li><span class="resultado">Ventas estimadas:</span> <span id="ventas"></span></li>
+    <li><span class="resultado">Ingresos:</span> $<span id="ingresos"></span></li>
+    <li><span class="resultado">Ganancia neta:</span> $<span id="ganancia"></span></li>
+    <li><span class="resultado">ROAS:</span> <span id="roas"></span></li>
+    <li><span class="resultado">CPA:</span> $<span id="cpa"></span></li>
+    <li><span class="resultado">Recomendación:</span> <span id="recomendacion"></span></li>
+  </ul>
+</div>
+    
+<!-- Contenedor de instrucciones y tips en 2 columnas -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Columna: Instrucciones -->
+    <div class="col-md-8">
+      <h5>Instrucciones:</h5>
+      <ul>
+        <li>Completa los datos con estimaciones realistas.</li>
+        <li>Usa CPC, CTR y CVR basados en tus resultados anteriores o benchmarks del sector.</li>
+        <li>La duración ayuda a calcular si tu presupuesto es suficiente para que el algoritmo aprenda.</li>
+      </ul>
+    </div>
 
-  
-
-  <!-- Modal CPC -->
-<div class="modal fade" id="modalCPC" tabindex="-1" aria-labelledby="modalCPCLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalCPCLabel">Costo por clic (CPC)</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          Puedes estimarlo viendo campañas similares en tu nicho o iniciando una prueba con poco presupuesto. Si no tienes datos, usa un valor promedio de <strong>$2.50 a $5.00 MXN</strong>.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
+    <!-- Columna: Tips -->
+    <div class="col-md-4">
+      <h5>Tips:</h5>
+      <ul>
+        <li>CTR ideal: &gt; 1%</li>
+        <li>CVR ideal: &gt; 1.5%</li>
+        <li>ROAS ideal: &gt; 2.5</li>
+      </ul>
     </div>
   </div>
-  
-  <!-- Modal Tasa -->
-  <div class="modal fade" id="modalTasa" tabindex="-1" aria-labelledby="modalTasaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTasaLabel">Tasa de conversión</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          Es el porcentaje de personas que realizan la acción deseada después de hacer clic. Si no tienes datos previos, usa una estimación basada en el tipo de tráfico. Tráfico frío: <strong>1-2%</strong>, tibio: <strong>3-5%</strong>, caliente: <strong>6-10%</strong>.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Ticket Promedio -->
-  <div class="modal fade" id="modalTicket" tabindex="-1" aria-labelledby="modalTicketLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTicketLabel">Ticket promedio por conversión</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          Es el valor promedio que ganas por cada conversión. Si vendes un producto de $500 MXN, ese sería tu ticket promedio. Este dato ayuda a estimar el retorno de tu inversión.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Conversiones mínimas -->
-  <div class="modal fade" id="modalConversiones" tabindex="-1" aria-labelledby="modalConversionesLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalConversionesLabel">Objetivo mínimo de conversiones</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          Puedes establecer una meta mínima de conversiones para validar si tu campaña es rentable. Por ejemplo, si necesitas al menos 30 ventas para cubrir costos fijos.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal Tipo de tráfico -->
-  <div class="modal fade" id="modalTrafico" tabindex="-1" aria-labelledby="modalTraficoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTraficoLabel">Tipo de tráfico</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          El tipo de tráfico afecta directamente la tasa de conversión. Tráfico frío es gente que no te conoce, tibio es gente que ya te sigue o ha interactuado contigo, y caliente es gente que ya mostró intención de compra.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-
-
-
-  <div class="container-fluid calculadora-container">
-    <h1 class="mb-4 text-center">Calculadora de Métricas para Meta Ads</h1>
-
-    <!-- MÉTRICA: CTR -->
-    <div class="container row calculadora mx-auto">
-      <div class="col-md-6">
-        <h3>CTR (Click Through Rate)</h3>
-        <label>Impresiones: <input type="number" id="ctr-impressions" class="form-control" value="10000"></label><br>
-        <label>Clics: <input type="number" id="ctr-clicks" class="form-control" value="150"></label><br>
-        <button class="btn btn-primary mt-2" onclick="calcCTR()">Calcular CTR</button>
-        <p class="mt-2">Resultado: <span class="result" id="ctr-result">--</span>%</p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>¿Qué es? : </strong> Porcentaje de personas que hicieron clic tras ver el anuncio.</p>
-        <p><strong>Valores:</strong><br> Malo: &lt; 0.8% <br> Medio: 1% <br> Bueno: &gt; 2%</p>
-        <p>Usa los valores por defecto o personalízalos. Presiona "Calcular CTR" para ver tu resultado.</p>
-      </div>
-    </div>
-    <hr>
-    <!-- MÉTRICA: CPM -->
-    <div class="container row calculadora mx-auto">
-      <div class="col-md-6">
-        <h3>CPM (Costo por Mil Impresiones)</h3>
-        <label>Gasto Total (MXN): <input type="number" id="cpm-cost" class="form-control" value="300"></label><br>
-        <label>Impresiones: <input type="number" id="cpm-impressions" class="form-control" value="10000"></label><br>
-        <button class="btn btn-primary mt-2" onclick="calcCPM()">Calcular CPM</button>
-        <p class="mt-2">Resultado: <span class="result" id="cpm-result">--</span> MXN</p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>¿Qué es?</strong> Cuánto cuesta mostrar tu anuncio 1000 veces.</p>
-        <p><strong>Valores:</strong> Bueno: &lt; $100 | Alto: &gt; $150 (competencia o mal targeting)</p>
-        <p>Modifica los valores si lo deseas, luego presiona calcular.</p>
-      </div>
-    </div>
-    <hr>
-    <!-- MÉTRICA: CPC -->
-    <div class="container row calculadora mx-auto">
-      <div class="col-md-6">
-        <h3>CPC (Costo por Clic)</h3>
-        <label>Gasto Total (MXN): <input type="number" id="cpc-cost" class="form-control" value="300"></label><br>
-        <label>Clics: <input type="number" id="cpc-clicks" class="form-control" value="150"></label><br>
-        <button class="btn btn-primary mt-2" onclick="calcCPC()">Calcular CPC</button>
-        <p class="mt-2">Resultado: <span class="result" id="cpc-result">--</span> MXN</p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>¿Qué es?</strong> Lo que pagas por cada clic en tu anuncio.</p>
-        <p><strong>Valores:</strong> Bueno: &lt; $5 | Medio: $5–10 | Malo: &gt; $10</p>
-      </div>
-    </div>
-    <hr>
-    <!-- MÉTRICA: ROAS -->
-    <div class="container row calculadora mx-auto">
-      <div class="col-md-6">
-        <h3>ROAS (Return on Ad Spend)</h3>
-        <label>Ingresos Generados (MXN): <input type="number" id="roas-revenue" class="form-control" value="2000"></label><br>
-        <label>Gasto Total (MXN): <input type="number" id="roas-cost" class="form-control" value="500"></label><br>
-        <button class="btn btn-primary mt-2" onclick="calcROAS()">Calcular ROAS</button>
-        <p class="mt-2">Resultado: <span class="result" id="roas-result">--</span></p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>¿Qué es?</strong> Cuánto ganas por cada peso invertido en publicidad.</p>
-        <p><strong>Valores:</strong> Malo: &lt; 1.5 | Aceptable: 2 | Bueno: &gt; 3</p>
-      </div>
-    </div>
-    <hr>
-    <!-- MÉTRICA: Costo por Resultado -->
-    <div class="container row calculadora mx-auto">
-      <div class="col-md-6">
-        <h3>Costo por Resultado</h3>
-        <label>Gasto Total (MXN): <input type="number" id="res-cost" class="form-control" value="500"></label><br>
-        <label>Resultados obtenidos: <input type="number" id="res-total" class="form-control" value="25"></label><br>
-        <button class="btn btn-primary mt-2" onclick="calcCostPerResult()">Calcular Costo por Resultado</button>
-        <p class="mt-2">Resultado: <span class="result" id="res-result">--</span> MXN</p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>¿Qué es?</strong> Cuánto te costó obtener cada lead, venta o mensaje.</p>
-        <p><strong>Ideal:</strong> Debe ser menor al valor del cliente o venta.</p>
+</div>  
+      <hr>
+      <!-- Explicación final -->
+      <div class="container mt-4">
+        <h5>¿Qué significan estos resultados?</h5>
+        <p>Esta herramienta te ayuda a proyectar el rendimiento de tus campañas en Meta Ads. Si tu ROAS es menor a 1, estás perdiendo dinero. Si es mayor a 2.5 y tu ganancia es positiva, la campaña es escalable. CPA (costo por adquisición) debe ser menor a tu ganancia neta por venta para que el negocio sea sostenible.</p>
       </div>
     </div>
 
